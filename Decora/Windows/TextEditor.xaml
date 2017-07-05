@@ -1,0 +1,31 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+	x:Class="Decora.TextEditor"
+	x:Name="Window"
+	Title="Text Editor"
+	Width="480" Height="320" WindowStartupLocation="CenterOwner" Icon="../Resources/Icons/app.ico" ResizeMode="NoResize" ShowInTaskbar="False">
+	
+	<Window.Background>
+		<RadialGradientBrush RadiusY="0.859" RadiusX="0.862">
+			<RadialGradientBrush.RelativeTransform>
+				<TransformGroup>
+					<ScaleTransform CenterY="0.5" CenterX="0.5"/>
+					<SkewTransform CenterY="0.5" CenterX="0.5"/>
+					<RotateTransform CenterY="0.5" CenterX="0.5"/>
+					<TranslateTransform X="-0.407" Y="-0.401"/>
+				</TransformGroup>
+			</RadialGradientBrush.RelativeTransform>
+			<GradientStop Color="#FF232323" Offset="0.995"/>
+			<GradientStop Color="#FF525252"/>
+		</RadialGradientBrush>
+	</Window.Background>
+
+	<Grid x:Name="LayoutRoot">
+		<TextBox x:Name="txtDTS" Margin="32,8,8,34" TextWrapping="WrapWithOverflow" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" SelectionChanged="txtText_SelectionChanged"/>
+		<Button Content="OK" HorizontalAlignment="Right" Margin="0,262,87,0" Width="75" Height="22" VerticalAlignment="Top" Click="Btn_OK_Click"/>
+		<Button Content="Cancel" Margin="391,262,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Height="22" IsCancel="True"/>
+		<Label x:Name="lblLine" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="26" Foreground="Silver" Padding="0" HorizontalContentAlignment="Right" Margin="0,8,0,0"/>
+	</Grid>
+</Window>
